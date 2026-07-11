@@ -1,6 +1,5 @@
 .gitignore
 .git/**
 .vscode/**
-README.md
 *.vsix
 node_modules/**
