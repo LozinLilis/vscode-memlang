@@ -1,0 +1,43 @@
+{
+  "name": "memlang",
+  "displayName": "MemLang",
+  "description": "MemLang 语法高亮与智能补全",
+  "version": "1.2.0",
+  "publisher": "LozinLilis",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LozinLilis/vscode-memlang"
+  },
+  "main": "./extension.js",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "activationEvents": [],
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "memlang",
+        "aliases": ["MemLang", "memlang"],
+        "extensions": [".mem"],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "memlang",
+        "scopeName": "source.memlang",
+        "path": "./syntaxes/memlang.tmLanguage.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "memlang",
+        "path": "./snippets/memlang.json"
+      }
+    ]
+  }
+}

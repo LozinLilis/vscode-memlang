@@ -1,0 +1,129 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "MemLang",
+  "scopeName": "source.memlang",
+  "fileTypes": [".mem", ".recall"],
+  "patterns": [
+    { "include": "#comments" },
+    { "include": "#text-counted" },
+    { "include": "#text-triple-quoted" },
+    { "include": "#block-declaration" },
+    { "include": "#sub-directive" },
+    { "include": "#field-key" },
+    { "include": "#edge-relation" },
+    { "include": "#authority" },
+    { "include": "#plus-n" },
+    { "include": "#number" }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.line.double-slash.memlang",
+          "match": "//.*$"
+        }
+      ]
+    },
+    "text-counted": {
+      "name": "string.quoted.other.memlang",
+      "begin": "(@)(text)\\s+(\\+\\d+)\\s*\\{",
+      "end": "^\\s*\\}",
+      "beginCaptures": {
+        "1": { "name": "keyword.operator.memlang" },
+        "2": { "name": "keyword.control.directive.memlang" },
+        "3": { "name": "storage.modifier.memlang" }
+      },
+      "endCaptures": {
+        "0": { "name": "punctuation.definition.block.memlang" }
+      },
+      "patterns": []
+    },
+    "text-triple-quoted": {
+      "name": "string.quoted.triple.memlang",
+      "begin": "(@)(text)\\s+\"\"\"",
+      "end": "\"\"\"",
+      "beginCaptures": {
+        "1": { "name": "keyword.operator.memlang" },
+        "2": { "name": "keyword.control.directive.memlang" }
+      },
+      "endCaptures": {
+        "0": { "name": "string.quoted.triple.memlang" }
+      },
+      "patterns": []
+    },
+    "block-declaration": {
+      "patterns": [
+        {
+          "match": "(@)(memory)\\b",
+          "captures": {
+            "1": { "name": "keyword.operator.memlang" },
+            "2": { "name": "keyword.control.block.memlang" }
+          }
+        }
+      ]
+    },
+    "sub-directive": {
+      "patterns": [
+        {
+          "match": "(@)(where|overlap|topics|ties|text|must|prefer|limit)\\b",
+          "captures": {
+            "1": { "name": "keyword.operator.memlang" },
+            "2": { "name": "keyword.control.directive.memlang" }
+          }
+        }
+      ]
+    },
+    "field-key": {
+      "patterns": [
+        {
+          "name": "variable.other.member.memlang",
+          "match": "^\\s*(room|scope|state|purpose|owner|speaker|authority|type|from|to|max_ms|top_k|relation|target|supports|contradicts|supersedes|derived_from|related_to|explains|requires|blocks)\\s*:"
+        },
+        {
+          "name": "variable.other.custom-field.memlang",
+          "match": "^\\s*[a-zA-Z_][a-zA-Z0-9_-]*\\s*:"
+        }
+      ]
+    },
+    "edge-relation": {
+      "patterns": [
+        {
+          "name": "entity.name.tag.memlang",
+          "match": "\\b(supports|contradicts|supersedes|derived_from|related_to|explains|requires|blocks)\\s+([a-zA-Z][a-zA-Z0-9_-]+)",
+          "captures": {
+            "1": { "name": "support.type.memlang" },
+            "2": { "name": "entity.name.tag.memlang" }
+          }
+        },
+        {
+          "name": "support.type.memlang",
+          "match": "\\b(supports|contradicts|supersedes|derived_from|related_to|explains|requires|blocks)\\b"
+        }
+      ]
+    },
+    "authority": {
+      "patterns": [
+        {
+          "name": "constant.language.memlang",
+          "match": "\\bA[1-9]\\+?\\b"
+        }
+      ]
+    },
+    "plus-n": {
+      "patterns": [
+        {
+          "name": "storage.modifier.memlang",
+          "match": "\\+\\d+"
+        }
+      ]
+    },
+    "number": {
+      "patterns": [
+        {
+          "name": "constant.numeric.memlang",
+          "match": "\\b[0-9]+(?:\\.[0-9]+)?\\b"
+        }
+      ]
+    }
+  }
+}

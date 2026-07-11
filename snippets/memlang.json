@@ -1,0 +1,83 @@
+{
+  "@memory": {
+    "prefix": "@memory",
+    "body": [
+      "@memory ${1:id} {",
+      "  @where {",
+      "    room: ${2:room_name}",
+      "    scope: ${3:scope_name}",
+      "    state: ${4|hot,warm,cold,permanent|}",
+      "    purpose: ${5:purpose}",
+      "    owner: ${6:owner}",
+      "    speaker: ${7:speaker}",
+      "    authority: A${8:5}",
+      "  }",
+      "",
+      "  @text \"\"\"",
+      "    ${9:content}",
+      "  \"\"\"",
+      "}"
+    ],
+    "description": "New memory block"
+  },
+  "@where": {
+    "prefix": "@where",
+    "body": [
+      "@where {",
+      "  room: ${1:room_name}",
+      "  scope: ${2:scope_name}",
+      "  state: ${3|hot,warm,cold,permanent|}",
+      "  purpose: ${4:purpose}",
+      "  owner: ${5:owner}",
+      "  speaker: ${6:speaker}",
+      "  authority: A${7:5}",
+      "}"
+    ],
+    "description": "Where block"
+  },
+  "@overlap": {
+    "prefix": "@overlap",
+    "body": [
+      "@overlap ${1:dim} {",
+      "  ${2:key}: ${3:0.72}",
+      "}"
+    ],
+    "description": "Soft distribution block"
+  },
+  "@topics": {
+    "prefix": "@topics",
+    "body": [
+      "@topics {",
+      "  ${1:topic}",
+      "}"
+    ],
+    "description": "Topics list"
+  },
+  "@ties": {
+    "prefix": "@ties",
+    "body": [
+      "@ties {",
+      "  ${1|supports,contradicts,supersedes,derived_from,related_to,explains,requires,blocks|}: ${2:target-eid}",
+      "}"
+    ],
+    "description": "Relation block"
+  },
+  "@text-trip": {
+    "prefix": "@text \"\"\"",
+    "body": [
+      "@text \"\"\"",
+      "  $0",
+      "\"\"\""
+    ],
+    "description": "Text block (triple quote)"
+  },
+  "@text-counted": {
+    "prefix": "@text +",
+    "body": [
+      "@text +${1:N} {",
+      "  $0",
+      "}"
+    ],
+    "description": "Text block (+N mode)"
+  }
+}
