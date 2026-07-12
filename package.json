@@ -21,8 +21,13 @@
     "languages": [
       {
         "id": "memlang",
-        "aliases": ["MemLang", "memlang"],
-        "extensions": [".mem"],
+        "aliases": [
+          "MemLang",
+          "memlang"
+        ],
+        "extensions": [
+          ".mem"
+        ],
         "configuration": "./language-configuration.json"
       }
     ],
@@ -39,5 +44,6 @@
         "path": "./snippets/memlang.json"
       }
     ]
-  }
+  },
+  "icon": "icon.png"
 }
