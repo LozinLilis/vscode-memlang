@@ -2,7 +2,7 @@
   "name": "mem-lang",
   "displayName": "Mem Lang",
   "description": "MemLang 语法高亮与智能补全",
-  "version": "1.3.1",
+  "version": "1.3.2",
   "publisher": "LozinLilis",
   "license": "MIT",
   "icon": "icon.png",
