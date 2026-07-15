@@ -1,0 +1,13 @@
+{
+  "iconDefinitions": {
+    "_memlang": {
+      "iconPath": "./icons/memlang.svg"
+    }
+  },
+  "fileExtensions": {
+    "mem": "_memlang"
+  },
+  "languageIds": {
+    "memlang": "_memlang"
+  }
+}

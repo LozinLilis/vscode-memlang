@@ -16,7 +16,7 @@ MemLang 语法高亮、智能补全与代码片段支持。
 
 ### 从 Marketplace 安装
 
-打开 VS Code，搜索 `MemLang` 安装。
+打开 VS Code，搜索 `Mem Lang` 安装。
 
 ### 手动安装
 

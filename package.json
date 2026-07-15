@@ -1,10 +1,11 @@
 {
-  "name": "memlang",
-  "displayName": "MemLang",
+  "name": "mem-lang",
+  "displayName": "Mem Lang",
   "description": "MemLang 语法高亮与智能补全",
-  "version": "1.2.0",
+  "version": "1.3.1",
   "publisher": "LozinLilis",
   "license": "MIT",
+  "icon": "icon.png",
   "repository": {
     "type": "git",
     "url": "https://github.com/LozinLilis/vscode-memlang"
@@ -43,7 +44,13 @@
         "language": "memlang",
         "path": "./snippets/memlang.json"
       }
+    ],
+    "iconThemes": [
+      {
+        "id": "memlang-icons",
+        "label": "MemLang Icons",
+        "path": "./memlang-icon-theme.json"
+      }
     ]
-  },
-  "icon": "icon.png"
+  }
 }

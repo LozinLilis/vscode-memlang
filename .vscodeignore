@@ -3,3 +3,4 @@
 .vscode/**
 *.vsix
 node_modules/**
+icon.svg

@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024" role="img" aria-label="MemLang icon">
+  <title>MemLang icon</title>
+  <desc>Balanced ICO-oriented MemLang emblem with warm Material-style solid color planes.</desc>
+
+  <defs>
+    <style>
+      .wing-main { fill: #FFB000; }
+      .wing-mid { fill: #F97316; }
+      .wing-low { fill: #EA580C; }
+      .center-raised { fill: #FFD54A; }
+      .center-main { fill: #FFB000; }
+      .center-deep { fill: #C2410C; }
+      .arrow { fill: #9A3412; }
+      .cut { fill: #FFFFFF; }
+    </style>
+  </defs>
+
+  <rect id="icon-canvas" x="0" y="0" width="1024" height="1024" fill="none"/>
+
+  <g id="logo" transform="translate(512 512) scale(0.88 1.2) translate(-512 -512) translate(0 -112)">
+    <g id="wings">
+      <g id="left-wing" transform="translate(-45 0) rotate(-15 512 500) translate(0 50)">
+        <path id="left-wing-main" class="wing-main" d="M82 240 C158 314 246 372 335 420 C374 441 397 469 406 508 C414 548 426 592 440 632 C450 662 461 705 472 740 C450 724 430 701 412 676 C398 656 386 634 376 611 C362 580 351 548 344 522 C338 505 329 487 318 472 C312 463 302 458 290 458 C207 380 137 321 82 240 Z"/>
+        <path id="left-wing-mid" class="wing-mid" d="M140 392 C205 435 262 479 313 528 C334 548 348 574 357 604 L391 720 C350 681 316 637 290 586 C258 522 207 458 140 392 Z"/>
+        <path id="left-wing-low" class="wing-low" d="M224 584 C271 617 313 651 350 688 C369 707 382 729 391 753 L418 822 C374 789 335 752 299 711 C272 679 247 637 224 584 Z"/>
+      </g>
+
+      <g id="right-wing" transform="translate(1024 0) scale(-1 1)">
+        <g transform="translate(-45 0) rotate(-15 512 500) translate(0 50)">
+          <path id="right-wing-main" class="wing-main" d="M82 240 C158 314 246 372 335 420 C374 441 397 469 406 508 C414 548 426 592 440 632 C450 662 461 705 472 740 C450 724 430 701 412 676 C398 656 386 634 376 611 C362 580 351 548 344 522 C338 505 329 487 318 472 C312 463 302 458 290 458 C207 380 137 321 82 240 Z"/>
+          <path id="right-wing-mid" class="wing-mid" d="M140 392 C205 435 262 479 313 528 C334 548 348 574 357 604 L391 720 C350 681 316 637 290 586 C258 522 207 458 140 392 Z"/>
+          <path id="right-wing-low" class="wing-low" d="M224 584 C271 617 313 651 350 688 C369 707 382 729 391 753 L418 822 C374 789 335 752 299 711 C272 679 247 637 224 584 Z"/>
+        </g>
+      </g>
+    </g>
+
+    <g id="letter-c" transform="translate(0 90) rotate(-90 512 374)">
+      <path id="c-lobe-left" class="center-raised" transform="rotate(-22 512 374)" d="M512 210 L640 346 L580 346 L512 270 L370 374 L300 374 Z"/>
+      <path id="c-lobe-right" class="center-main" transform="rotate(22 512 374)" d="M300 374 L370 374 L512 478 L580 402 L640 402 L512 538 Z"/>
+      <path id="c-center-bar" class="center-deep" d="M450 354 H574 V394 H450 Z"/>
+    </g>
+
+    <g id="floating-arrow" transform="translate(0 35)">
+      <path id="arrow-shape" class="arrow" d="M512 650 L600 790 L552 770 L512 858 L472 770 L424 790 Z"/>
+      <path id="arrow-inner-v" class="cut" d="M512 700 L552 770 L512 748 L472 770 Z"/>
+    </g>
+  </g>
+</svg>
