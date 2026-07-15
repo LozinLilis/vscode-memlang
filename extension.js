@@ -15,7 +15,7 @@ const FIELD_KEYS = [
   ['purpose', '功能分类'],
   ['owner', '所属主体'],
   ['speaker', '说话主体'],
-  ['authority', '权威等级'],
+  ['authority', '权威权重（float）'],
 ];
 
 const STATES = ['hot', 'warm', 'cold', 'permanent'];
@@ -81,9 +81,7 @@ function activate(ctx) {
         if (ctx === 'after-owner') return OWNERS.map(s => mk(s, vscode.CompletionItemKind.EnumMember, 'user/agent'));
         if (ctx === 'after-speaker') return SPEAKERS.map(s => mk(s, vscode.CompletionItemKind.EnumMember, '说话主体'));
         if (ctx === 'after-authority') {
-          const items = [];
-          for (let i = 1; i <= 9; i++) items.push(mk('A' + i, vscode.CompletionItemKind.EnumMember, '权威等级'));
-          return items;
+          return ['0.25', '0.5', '0.75', '1.0'].map(s => mk(s, vscode.CompletionItemKind.Value, '权威权重（float）'));
         }
 
         if (ctx === 'ties-rel') {

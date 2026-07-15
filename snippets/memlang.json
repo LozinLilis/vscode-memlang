@@ -10,7 +10,7 @@
       "    purpose: ${5:purpose}",
       "    owner: ${6:owner}",
       "    speaker: ${7:speaker}",
-      "    authority: A${8:5}",
+      "    authority: ${8:0.5}",
       "  }",
       "",
       "  @text \"\"\"",
@@ -30,7 +30,7 @@
       "  purpose: ${4:purpose}",
       "  owner: ${5:owner}",
       "  speaker: ${6:speaker}",
-      "  authority: A${7:5}",
+      "  authority: ${7:0.5}",
       "}"
     ],
     "description": "Where block"

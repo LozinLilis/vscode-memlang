@@ -17,7 +17,7 @@
 
   <rect id="icon-canvas" x="0" y="0" width="1024" height="1024" fill="none"/>
 
-  <g id="logo" transform="translate(512 512) scale(0.88 1.2) translate(-512 -512) translate(0 -112)">
+  <g id="logo" transform="translate(512 512) scale(0.88 1.2) translate(-512 -512)">
     <g id="wings">
       <g id="left-wing" transform="translate(-45 0) rotate(-15 512 500) translate(0 50)">
         <path id="left-wing-main" class="wing-main" d="M82 240 C158 314 246 372 335 420 C374 441 397 469 406 508 C414 548 426 592 440 632 C450 662 461 705 472 740 C450 724 430 701 412 676 C398 656 386 634 376 611 C362 580 351 548 344 522 C338 505 329 487 318 472 C312 463 302 458 290 458 C207 380 137 321 82 240 Z"/>

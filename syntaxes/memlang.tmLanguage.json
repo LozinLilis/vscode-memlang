@@ -104,8 +104,8 @@
     "authority": {
       "patterns": [
         {
-          "name": "constant.language.memlang",
-          "match": "\\bA[1-9]\\+?\\b"
+          "name": "constant.numeric.memlang",
+          "match": "(?<=authority:\\s*)[0-9]+(?:\\.[0-9]+)?\\b"
         }
       ]
     },
